@@ -1,7 +1,14 @@
 --TP 4-Ventas Tech--
+SElECT *
+FROM ventas
 
---Consultas SQL- Agregué 2 filas con otros datos para tener mas variedad--
+--Agregué 2 filas con otros datos para tener mas variedad--
+INSERT INTO ventas (id_venta,fecha_venta,id_cliente,id_producto,cantidad,precio_unitario)
+	VALUES
+	(11, '2024-01-12',2, 2, 3, 28.00),
+	(12, '2024-01-18',3, 6, 1, 95.00);
 
+--Consultas SQL--
 SElECT *
 FROM ventas
 
