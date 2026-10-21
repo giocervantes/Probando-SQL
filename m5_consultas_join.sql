@@ -1,7 +1,7 @@
 --TP 5--
 --Archivo: ventas_tech_db--
 
---Tablas--
+--Tablas a usar --
 
     SELECT *
     FROM cliente
@@ -18,7 +18,7 @@
 ---
 
 --Consulta 1(Vista base del proyecto)--
---Proposito: ver las ventas mas recientes, que se vendió, cuantas unidades y quien lo compro y el ingreso
+--Proposito: ver las ventas mas recientes, que se vendió, cuantas unidades y quien lo compro y el ingreso generado
 SELECT
     v.fecha_venta,
     c.id_cliente,
@@ -73,12 +73,12 @@ SELECT
         FROM productos AS p
         ORDER BY TotalVendido ASC;
 
---Hallazgos: Al ordenar la tabla ascendente, en la parte de arriba se muestra que el producto auriculares es el que genera menor ingreso y abajo los que mas dinero generaron--
+--Hallazgos: Al ordenar la tabla ascendente, en la parte de arriba se muestra que el producto auriculares es el que generó menor ingreso y abajo los que mas dinero generaron--
 
 ---
 
 --Consulta 4 (UNION ALL)--
---No entendi la consulta. Tengo que crear  2 grupos con esos datos (total facturado), definiendo un corte en los meses indicando cuales fueron online y presencial..y las uno en una nueva tabla  --
+--No entendi la consulta. En portal de CODER el video dispone de 2 tablas parecidas y en las que tengo no. Tengo que dividir, crear  2 grupos con esos datos (total facturado), definiendo un corte en los meses indicando cuales fueron online y presencial..y las uno en una nueva tabla  --
 
 SELECT canal, SUM(total) AS total_canal
 FROM (
